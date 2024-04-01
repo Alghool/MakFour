@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use App\Entities\User;
+
 class LoginController extends BaseController
 {
 
@@ -10,4 +12,15 @@ class LoginController extends BaseController
 		$twig->display( 'login');
 	}
 
+	public function doSignup(){
+		$user = new User();
+		$user->name = $this->request->getPost('name');
+		$user->password = $this->request->getPost('pass');
+		$user->email = $this->request->getPost('email');
+		$user->phone = $this->request->getPost('phone');
+
+		$user->saveWithProtect();
+
+		dd($user);
+	}
 }

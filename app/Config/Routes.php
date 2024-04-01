@@ -9,5 +9,5 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index',  ['filter' => \App\Filters\AuthFilter::class]);
 
 $routes->get('/login', 'LoginController::login');
-
+$routes->post('/signup', 'LoginController::doSignup');
 

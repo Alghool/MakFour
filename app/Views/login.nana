@@ -129,10 +129,11 @@
 						<!-- TABS CONTENT SIGNUP -->
 						<div id="signup-tab-content">
 							<form class="signup-form" action="\signup" method="post">
-								<input type="email" class="input" id="email" name="email" autocomplete="off" placeholder="Email">
-								<input type="text" class="input" id="name" name="name" autocomplete="off" placeholder="Username">
-								<input type="password" class="input" id="pass" name="pass" autocomplete="off" placeholder="Password">
-								<input type="password" class="input" id="re_pass" name="re_pass" autocomplete="off" placeholder="Repeat Password">
+								<input type="email" class="input {{ foo ? 'yes' : 'no' }} validation_error" id="email" name="email" autocomplete="off" placeholder="Email">
+								<span class="validation_error">Email exist please recheck your email </span>
+								<input type="text" class="input" id="name" name="name" autocomplete="off" placeholder="Full Name">
+								<input type="password" class="input" id="password" name="password" autocomplete="off" placeholder="Password">
+								<input type="password" class="input" id="re_password" name="re_password" autocomplete="off" placeholder="Repeat Password">
 								<input type="text" class="input" id="phone" name="phone" autocomplete="off" placeholder="Phone">
 								<input type="submit" class="button" value="Sign Up">
 							</form>

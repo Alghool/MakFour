@@ -15,12 +15,12 @@ class LoginController extends BaseController
 	public function doSignup(){
 		$user = new User();
 		$user->name = $this->request->getPost('name');
-		$user->password = $this->request->getPost('pass');
+		$user->password = $this->request->getPost('password');
 		$user->email = $this->request->getPost('email');
 		$user->phone = $this->request->getPost('phone');
+		$valid = $user->withoutProtection()->save();
 
-		$user->saveWithProtect();
 
-		dd($user);
+		dd($valid, $user->getErrors(), $user);
 	}
 }

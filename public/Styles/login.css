@@ -925,3 +925,15 @@ input {
 	opacity: 0.0;
 	transform: scale(1) translate3d(0,0,0);
 }
+
+/*custom styling*/
+
+.input.validation_error{
+	border-bottom: 1px solid red !important;
+}
+span.validation_error{
+	color: orangered;
+	font-size: 14px;
+	display: block;
+	margin-top: -15px;
+}
